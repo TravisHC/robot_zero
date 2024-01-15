@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/travis/code/robot_zero/src/esp/get-started/blink/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/home/travis/code/robot_zero/src/esp/get-started/blink/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/home/travis/code/robot_zero/src/esp/get-started/blink/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/home/travis/code/robot_zero/src/esp/get-started/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/home/travis/code/robot_zero/src/esp/get-started/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/travis/code/robot_zero/src/esp/get-started/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/home/travis/code/robot_zero/src/esp/get-started/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		},
+		{
+			"file" : "/home/travis/code/robot_zero/src/esp/get-started/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/home/travis/code/robot_zero/src/esp/get-started/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/home/travis/code/robot_zero/src/esp/get-started/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}
