@@ -116,7 +116,7 @@ void esp_now_send_json(const char *json_data) {
         memcpy(chunk + 1, json_data + offset, chunk_size);
 
         ESP_ERROR_CHECK(esp_now_send(s_example_broadcast_mac, chunk, chunk_size + 1));
-        vTaskDelay(pdMS_TO_TICKS(50)); // 短暂延时以确保消息不会被覆盖
+        // vTaskDelay(pdMS_TO_TICKS(1)); // 短暂延时以确保消息不会被覆盖
     }
 }
 
@@ -158,7 +158,8 @@ void uart_task(void *param) {
         vTaskDelete(NULL); 
     }
     while (1) {
-        int len = uart_read_bytes(UART_PORT_NUM, data, MAX_JSON_SIZE - 1, 100 / portTICK_PERIOD_MS);
+        int uart_read_wait_ms = 20; // ms
+        int len = uart_read_bytes(UART_PORT_NUM, data, MAX_JSON_SIZE - 1, uart_read_wait_ms / portTICK_PERIOD_MS);
         if (len > 0) {
             data[len] = '\0'; // 添加字符串结束符
             if(checkBrace(data, len) && data[0] == '{') {
@@ -178,7 +179,7 @@ void uart_task(void *param) {
                 // esp_now_send_json((char *)data);
             }
         }
-        vTaskDelay(pdMS_TO_TICKS(10)); // 避免任务占用过多 CPU
+        // vTaskDelay(pdMS_TO_TICKS(1)); // 避免任务占用过多 CPU
     }
     free(data);
 }
